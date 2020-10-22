@@ -131,6 +131,10 @@ function startQuest(){
     ])
     .then(res =>{
       console.log(res)
+      const intern = new Intern(res.internName, res.internId, res.internEmail, res.internSchool)
+      teamMembers.push(intern)
+      idArr.push(res.internId)
+      employeeType()
     })
   }
   function done(){
